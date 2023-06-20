@@ -25,5 +25,17 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "Bienvenido al contador", Toast.LENGTH_SHORT).show();
             }
         });
+
+        btnContar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Obtener el número actual del TextView
+                int numero = Integer.parseInt(textView.getText().toString());
+                numero++;
+
+                // Actualizar el TextView con el nuevo número
+                textView.setText(String.valueOf(numero));
+            }
+        });
     }
 }
